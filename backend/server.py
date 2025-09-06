@@ -100,6 +100,9 @@ def calculate_days_to_expiry(expiry_date_str: str) -> int:
     """Calculate days until expiry"""
     try:
         expiry_date = datetime.fromisoformat(expiry_date_str.replace('Z', '+00:00'))
+        # If expiry_date is timezone-naive, make it timezone-aware
+        if expiry_date.tzinfo is None:
+            expiry_date = expiry_date.replace(tzinfo=timezone.utc)
         now = datetime.now(timezone.utc)
         return (expiry_date - now).days
     except:
