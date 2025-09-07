@@ -121,14 +121,7 @@ const AdminLogin = ({ onLogin }) => {
               </Button>
             </form>
 
-            {/* Demo Credentials */}
-            <div className="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-              <p className="text-sm text-blue-300 mb-2 font-medium">Demo Credentials:</p>
-              <div className="text-xs text-gray-300 space-y-1">
-                <div>Username: <span className="font-mono bg-gray-800 px-2 py-1 rounded">admin</span></div>
-                <div>Password: <span className="font-mono bg-gray-800 px-2 py-1 rounded">admin123</span></div>
-              </div>
-            </div>
+            
           </CardContent>
         </Card>
 
